@@ -1,11 +1,13 @@
 /* =========================
    FONDO GENERAL
 ========================= */
-
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
     font-family: "Segoe UI", sans-serif;
 
     background: linear-gradient(
@@ -15,7 +17,6 @@ body {
         #d9fff8
     );
 }
-
 
 /* =========================
    TARJETA PRINCIPAL
