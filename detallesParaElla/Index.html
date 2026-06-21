@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para ti 💚</title>
+
+  <!-- Bootstrap -->
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <!-- Música -->
+  <audio id="musica" loop>
+    <source src="music/cancion.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Decoración JS -->
+  <div id="decoracion"></div>
+
+  <main class="container min-vh-100 d-flex justify-content-center align-items-center">
+    <section class="card-principal text-center">
+
+      <h1>Para ti, mi niña bonita 💚</h1>
+
+      <p>
+        Hice este pequeño detalle para recordarte que no estás solita.
+        Aunque hoy estés triste, quiero que sepas que eres muy especial para mí.
+      </p>
+
+      <div class="botones">
+        <a href="carta.html" class="btn btn-carta">
+          Leer cartita ✨
+        </a>
+
+       <button class="btn-huella" onclick="irAlCubo()" title="Cubo de fotos">
+          <span>💚</span>
+        </button>
+
+
+      </div>
+
+      <button class="btn-musica mt-4" onclick="controlarMusica()">
+        Reproducir música 🎵
+      </button>
+
+    </section>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+  <!-- JavaScript -->
+  <script src="/js/script.js"></script>
+
+</body>
+</html>

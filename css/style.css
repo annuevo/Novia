@@ -1,0 +1,619 @@
+/* =========================
+   FONDO GENERAL
+========================= */
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "Segoe UI", sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #7fffd4,
+        #b8fff0,
+        #d9fff8
+    );
+}
+
+
+/* =========================
+   TARJETA PRINCIPAL
+========================= */
+
+.card-principal {
+
+    max-width: 700px;
+    width: 90%;
+
+    padding: 50px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.35);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,0.15);
+
+    animation: aparecer 1.2s ease;
+}
+
+
+/* =========================
+   TITULO
+========================= */
+
+.card-principal h1 {
+
+    color: #008f7a;
+
+    font-size: 3rem;
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   TEXTO
+========================= */
+
+.card-principal p {
+
+    color: #2d5e58;
+
+    font-size: 1.2rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   CONTENEDOR BOTONES
+========================= */
+
+.botones {
+
+    margin-top: 35px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   BOTON CARTA
+========================= */
+
+.btn-carta {
+
+    background: linear-gradient(
+        135deg,
+        #00c9a7,
+        #00b894
+    );
+
+    border: none;
+
+    color: white !important;
+
+    font-weight: bold;
+
+    padding: 14px 35px;
+
+    border-radius: 40px;
+
+    transition: .3s;
+}
+
+.btn-carta:hover {
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 10px 25px rgba(0,184,148,.35);
+}
+
+
+/* =========================
+   BOTON HUELLA
+========================= */
+
+.btn-huella {
+
+    width: 85px;
+    height: 85px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #00b894,
+        #00cec9
+    );
+
+    color: white;
+
+    font-size: 2rem;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    box-shadow:
+        0 8px 20px rgba(0,184,148,.30);
+}
+
+.btn-huella:hover {
+
+    transform: scale(1.12) rotate(8deg);
+}
+
+
+/* =========================
+   BOTON MUSICA
+========================= */
+
+.btn-musica {
+
+    background: white;
+
+    border: 2px solid #00b894;
+
+    color: #00b894;
+
+    padding: 12px 28px;
+
+    border-radius: 40px;
+
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+.btn-musica:hover {
+
+    background: #00b894;
+
+    color: white;
+}
+
+
+/* =========================
+   ELEMENTOS FLOTANTES
+========================= */
+
+.flotante {
+
+    position: absolute;
+
+    pointer-events: none;
+
+    animation: subir linear infinite;
+}
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes subir {
+
+    from {
+
+        transform: translateY(100vh);
+    }
+
+    to {
+
+        transform: translateY(-150px);
+    }
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .card-principal{
+
+        padding: 35px;
+    }
+
+    .card-principal h1{
+
+        font-size: 2.2rem;
+    }
+
+    .card-principal p{
+
+        font-size: 1rem;
+    }
+}
+
+/*********************************************CARTAAAAAAAAAAAAAAAA
+
+/* botón volver */
+.btn-volver {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 10;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 184, 148, 0.15);
+    color: #008f7a;
+    font-size: 28px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-volver:hover {
+    background: #00b894;
+    color: white;
+    transform: scale(1.08);
+}
+
+/* contenedor general */
+.contenedor-carta {
+    position: relative;
+    min-height: 100vh;
+    padding: 55px 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* hoja */
+.hoja-carta {
+    width: 100%;
+    max-width: 430px;
+    min-height: 690px;
+    padding: 35px 32px 45px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+    animation: aparecerHoja 1.2s ease;
+}
+
+.capitulo {
+    color: #333;
+    font-style: italic;
+    margin-bottom: 28px;
+}
+
+.titulo-carta {
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    color: #222;
+    margin-bottom: 28px;
+}
+
+.hoja-carta p {
+    font-size: 16px;
+    line-height: 1.65;
+    text-align: justify;
+    color: #1f1f1f;
+    font-style: italic;
+    margin-bottom: 22px;
+}
+
+.firma {
+    margin-top: 30px;
+    text-align: center;
+    font-family: cursive;
+    color: #777;
+    font-size: 18px;
+}
+
+/* corazón superior */
+.corazon-huella {
+    text-align: center;
+    font-size: 55px;
+    margin-bottom: 10px;
+    animation: latido 1.8s infinite;
+}
+
+/* imagen de flores */
+.persona-flores {
+    position: absolute;
+    right: 10%;
+    bottom: 80px;
+    width: 210px;
+    animation: flotarPersona 3s ease-in-out infinite;
+}
+
+.persona-flores img {
+    width: 100%;
+    filter: drop-shadow(0 12px 12px rgba(0,0,0,0.12));
+}
+
+/* botón música */
+.btn-musica-carta {
+    display: block;
+    margin: 28px auto 0;
+    padding: 12px 24px;
+    border: 2px solid #00b894;
+    border-radius: 30px;
+    background: white;
+    color: #008f7a;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-musica-carta:hover {
+    background: #00b894;
+    color: white;
+}
+
+/* pétalos */
+.petalo {
+    position: fixed;
+    top: -30px;
+    z-index: 1;
+    pointer-events: none;
+    animation: caer linear forwards;
+}
+
+/* animaciones */
+@keyframes aparecerHoja {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes latido {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+@keyframes flotarPersona {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes caer {
+    from {
+        transform: translateY(-30px) rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* responsive */
+@media (max-width: 900px) {
+    .persona-flores {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: 190px;
+        margin-top: -120px;
+        margin-left: 180px;
+    }
+
+    .contenedor-carta {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hoja-carta {
+        max-width: 360px;
+        padding: 32px 25px 40px;
+    }
+
+    .hoja-carta p {
+        font-size: 15px;
+    }
+
+    .persona-flores {
+        width: 160px;
+        margin-left: 150px;
+        margin-top: -100px;
+    }
+}
+
+/*/
+
+/*CUBOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO****/
+
+.titulo-container {
+    text-align: center;
+    padding-top: 45px;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.18);
+}
+
+.titulo-container h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+}
+
+.titulo-container p {
+    font-size: 1.1rem;
+}
+
+.escena {
+    width: 260px;
+    height: 260px;
+    margin: 95px auto 0;
+    perspective: 1000px;
+}
+
+.cubo {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: girarCubo 13s infinite linear;
+}
+
+.cara {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border: 4px solid rgba(255,255,255,0.85);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 0 28px rgba(255,255,255,0.45);
+    background: white;
+}
+
+.cara img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.frente {
+    transform: translateZ(130px);
+}
+
+.atras {
+    transform: rotateY(180deg) translateZ(130px);
+}
+
+.derecha {
+    transform: rotateY(90deg) translateZ(130px);
+}
+
+.izquierda {
+    transform: rotateY(-90deg) translateZ(130px);
+}
+
+.arriba {
+    transform: rotateX(90deg) translateZ(130px);
+}
+
+.abajo {
+    transform: rotateX(-90deg) translateZ(130px);
+}
+
+.mensaje-final {
+    text-align: center;
+    margin-top: 95px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    animation: aparecer 1.4s ease;
+}
+
+@keyframes girarCubo {
+    from {
+        transform: rotateX(-18deg) rotateY(0deg);
+    }
+
+    to {
+        transform: rotateX(-18deg) rotateY(360deg);
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width: 576px) {
+    .titulo-container h1 {
+        font-size: 2rem;
+    }
+
+    .escena {
+        width: 210px;
+        height: 210px;
+        margin-top: 85px;
+    }
+
+    .cara {
+        width: 210px;
+        height: 210px;
+    }
+
+    .frente {
+        transform: translateZ(105px);
+    }
+
+    .atras {
+        transform: rotateY(180deg) translateZ(105px);
+    }
+
+    .derecha {
+        transform: rotateY(90deg) translateZ(105px);
+    }
+
+    .izquierda {
+        transform: rotateY(-90deg) translateZ(105px);
+    }
+
+    .arriba {
+        transform: rotateX(90deg) translateZ(105px);
+    }
+
+    .abajo {
+        transform: rotateX(-90deg) translateZ(105px);
+    }
+
+    .mensaje-final {
+        margin-top: 75px;
+        font-size: 1rem;
+    }
+}
